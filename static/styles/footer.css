@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+footer {
+    display: flex;
+    justify-content: center;
+    background: white;
+    padding-top: 24px;
+    & .sub-section {
+        width: 100%;
+        max-width: 1137px;
+    }
+    & .info-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    & .info-block {
+        display: flex;
+        align-items: center;
+        grid-gap: 75.5px;
+        & .contacts-block p {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+            margin: 4px 0;
+        }
+    }
+    & .link-block {
+        display: flex;
+        align-items: center;
+        grid-gap: 24px;
+        & .app-store {margin-left: -8px}
+    }
+
+    & .copyright-block {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+        & p {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21px;
+            color: #757575;
+        }
+        & .terms-link {
+            display: flex;
+            grid-gap: 24px;
+            & a {
+                font-family: "Inter", sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 17px;
+                color: #757575;
+            }
+        }
+    }
+
+    & h3 {
+        font-family: "Rounded Mplus 1c", sans-serif;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 27px;
+        margin-bottom: 16px;
+    }
+}

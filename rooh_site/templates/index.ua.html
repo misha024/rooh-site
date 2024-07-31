@@ -1,0 +1,330 @@
+{% extends '--main.html' %}
+{% load static %}
+
+{% block title %}Про нас{% endblock %}
+
+{% block c-styles %}
+<link rel="stylesheet" href="{% static 'styles/section-about.css' %}">
+<link rel="stylesheet" href="{% static 'styles/section-advantage.css' %}">
+<link rel="stylesheet" href="{% static 'styles/section-how-it-works.css' %}">
+<link rel="stylesheet" href="{% static 'styles/section-tariffs.css' %}">
+<link rel="stylesheet" href="{% static 'styles/section-faq.css' %}">
+{% endblock %}
+
+{% block sections %}
+<section id="about-section" class="about-section">
+    <div class="sub-section">
+        <img class="main-section-image m-not" src="{% static 'img/about-1.png' %}">
+        <div class="main-section-info">
+            <h1 class="section-name">Легкий.<br>Швидкий.<br><span class="text-red">Вільний!</span></h1>
+            <p class="section-description">За допомогою дотику на телефоні,<br class="m-not"><br class="m-not">використовуй зручний спосіб пересування містом, ознайомся з цікавими місцями з нової точки зору.<br><br>Свіже повітря, вклад в екологію, пересування із задоволенням.</p>
+            <div class="section-buttons m-not">
+                <a href="#"><button class="section-button red download-app">Завантажити</button></a>
+                <a href="#"><button class="section-button transparent details-app">Деталі Франшизи</button></a>
+            </div>
+            <div class="social-links m-show">
+                <a href="#"><img src="{% static 'img/link-google-play.png' %}" class="social-link google-play"></a>
+                <a class="link__social link__appstore" href="https://apps.apple.com/ua/app/rooh-ua/id6478281644?l=uk"><span>Завантажте в</span><img src="{% static 'img/link-app-store.png' %}" class="social-link app-store"></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="advantages-section" class="advantages">
+    <div class="sub-section swiper-container">
+        <h2 class="section-name">НАШI ПЕРЕВАГИ</h2>
+        <div class="swiper-wrapper advantage-block">
+            <div class="swiper-slide advantage-card">
+                <img class="advantage-card-img" src="{% static 'img/advantage-slider/img1.png' %}">
+                <h4 class="advantage-card-title">Зручний мобільний додаток</h4>
+                <h6 class="advantage-card-description">Пауза– Бронювання– Жива підтримка– Мультиоренда*до 2-х самокатівз одного девайсу</h6>
+            </div>
+            <div class="swiper-slide advantage-card">
+                <img class="advantage-card-img" src="{% static 'img/advantage-slider/img2.png' %}">
+                <h4 class="advantage-card-title">Свобода Руху</h4>
+                <h6 class="advantage-card-description">Досліджуйте місто без заторів. Наші самокати – ваш ключ до швидких та зручних поїздок.</h6>
+            </div>
+            <div class="swiper-slide advantage-card">
+                <img class="advantage-card-img" src="{% static 'img/advantage-slider/img3.png' %}">
+                <h4 class="advantage-card-title">Підтримка 24/7</h4>
+                <h6 class="advantage-card-description">Наша команда завжди на зв'язку, щоб допомогти вам на кожному етапі оренди.</h6>
+            </div>
+            <div class="swiper-slide advantage-card">
+                <img class="advantage-card-img" src="{% static 'img/advantage-slider/img4.png' %}">
+                <h4 class="advantage-card-title">ЕкоТранспорт</h4>
+                <h6 class="advantage-card-description">Переміщайтеся з повагою до природи. Наші електросамокати допомагають знижувати викиди та захищають довкілля.</h6>
+            </div>
+            <div class="swiper-slide advantage-card">
+                <img class="advantage-card-img" src="{% static 'img/advantage-slider/img5.png' %}">
+                <h4 class="advantage-card-title">Безпека</h4>
+                <h6 class="advantage-card-description">Наші самокати оснащені сучасними системами безпеки та регулярно обслуговуються для вашого спокою.</h6>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<section id="how-it-works-section-desktop" class="how-it-works">
+    <div class="sub-section">
+        <h2 class="section-name">ЯК ЦЕ ПРАЦЮЄ</h2>
+        <div class="items-container">
+            <img class="items-container-phone-img" src="{% static 'img/how-it-works-2.png' %}">
+            <div class="item-block">
+                <div class="item-name">
+                    <img class="item-number" src="{% static 'img/how-it-works-number-1.png' %}">
+                    <h4>Завантаж додаток</h4>
+                </div>
+                <h6 class="item-description">Завантажте додаток Rooh з App Store або Google Play, пройдіть швидку реєстрацію та почніть насолоджуватися свободою переміщення містом на наших електросамокатах. Все, що вам потрібно для нових вражень, тепер у вашому смартфоні!</h6>
+            </div>
+            <div class="item-block">
+                <div class="item-name">
+                    <img class="item-number" src="{% static 'img/how-it-works-number-2.png' %}">
+                    <h4>Знайди вільний самокат на карті</h4>
+                </div>
+                <h6 class="item-description">Відкрийте додаток Rooh, використовуйте карту для відображення вільних самокатів у вашому районі та виберіть найближчий, щоб почати поїздку. Все просто і швидко, ваш самокат чекає!</h6>
+            </div>
+            <div class="item-block">
+                <div class="item-name">
+                    <img class="item-number" src="{% static 'img/how-it-works-number-3.png' %}">
+                    <h4>Відскануй QR-код на кермі.</h4>
+                </div>
+                <h6 class="item-description">Відкрийте додаток Rooh і використовуйте функцію сканування QR-коду, щоб відсканувати код на кермі самоката та розблокувати його. Це швидко та легко запустить вашу поїздку!</h6>
+            </div>
+            <div class="item-block">
+                <div class="item-name">
+                    <img class="item-number" src="{% static 'img/how-it-works-number-4.png' %}">
+                    <h4>Оплати поїздку</h4>
+                </div>
+                <h6 class="item-description">Поповніть  особистий баланс через додаток Rooh та розпочніть поїздку. Завершіть поїздку через додаток Rooh, перевірте суму до оплати та сплатіть з коштів на особистому рахунку. Після підтвердження оплати отримаєте квитанцію про успішне завершення поїздки.</h6>
+            </div>
+            <div class="item-block">
+                <div class="item-name">
+                    <img class="item-number" src="{% static 'img/how-it-works-number-5.png' %}">
+                    <h4>Відштовхнись два рази та натисни
+                        ручку газу зправої сторони.</h4>
+                </div>
+                <h6 class="item-description" style="min-width: 150%">Щоб розпочати рух на електросамокаті Rooh, відштовхніться ногою двічі, щоб набрати початкову швидкість, а потім натисніть на ручку газу, яка знаходиться з правої сторони керма, щоб активувати мотор і продовжити рух.</h6>
+            </div>
+            <div class="item-block">
+                <div class="item-name">
+                    <img class="item-number" src="{% static 'img/how-it-works-number-6.png' %}">
+                    <h4>Насолоджуйся поїздкою
+                        (дотримуйся правил ПДР)</h4>
+                </div>
+                <h6 class="item-description">Насолоджуйтеся поїздкою на електросамокаті Rooh, але не забувайте дотримуватися правил дорожнього руху для безпеки себе та оточуючих.</h6>
+            </div>
+            <div class="item-block">
+                <div class="item-name">
+                    <img class="item-number" src="{% static 'img/how-it-works-number-7.png' %}">
+                    <h4>Паркуйся правильно, залиш самокат в зручному місці,
+                        де він не буде перешкоджати людям та автомобілям</h4>
+                </div>
+                <h6 class="item-description">Паркуйте самокат відповідально, обираючи місце, де він не створюватиме перешкод для пішоходів, велосипедистів та автомобілів. Уникайте блокування тротуарів, виходів з будівель та інших ключових зон доступу.</h6>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="how-it-works-section-mobile" style="display: none" class="mobile how-it-works">
+    <div class="sub-section">
+        <h2 class="section-name">ЯК ЦЕ ПРАЦЮЄ</h2>
+        <div class="items-container">
+            <div class="item-block active">
+                <img src="{% static 'img/m-how-it-works-1.png' %}" class="m-item-title-image">
+                <div class="item-name">
+                    <img class="item-number" src="{% static 'img/how-it-works-number-1.png' %}">
+                    <h4>Завантаж додаток</h4>
+                </div>
+                <h6 class="item-description">Завантажте додаток Rooh з App Store або Google Play, пройдіть швидку реєстрацію та почніть насолоджуватися свободою переміщення містом на наших електросамокатах. Все, що вам потрібно для нових вражень, тепер у вашому смартфоні!<img src="{% static 'img/m-carel-down.png' %}"></h6>
+            </div>
+            <div class="item-block">
+                <img src="{% static 'img/m-how-it-works-2.png' %}" class="m-item-title-image">
+                <div class="item-name">
+                    <img class="item-number" src="{% static 'img/how-it-works-number-2.png' %}">
+                    <h4>Знайди вільний самокат на карті</h4>
+                </div>
+                <h6 class="item-description">Відкрийте додаток Rooh, використовуйте карту для відображення вільних самокатів у вашому районі та виберіть найближчий, щоб почати поїздку. Все просто і швидко, ваш самокат чекає!<img src="{% static 'img/m-carel-down.png' %}"></h6>
+            </div>
+            <div class="item-block">
+                <img src="{% static 'img/m-how-it-works-3.png' %}" class="m-item-title-image">
+                <div class="item-name">
+                    <img class="item-number" src="{% static 'img/how-it-works-number-3.png' %}">
+                    <h4>Відскануй QR-код на кермі.</h4>
+                </div>
+                <h6 class="item-description">Відкрийте додаток Rooh і використовуйте функцію сканування QR-коду, щоб відсканувати код на кермі самоката та розблокувати його. Це швидко та легко запустить вашу поїздку!<img src="{% static 'img/m-carel-down.png' %}"></h6>
+            </div>
+            <div class="item-block">
+                <img src="{% static 'img/m-how-it-works-4.png' %}" class="m-item-title-image">
+                <div class="item-name">
+                    <img class="item-number" src="{% static 'img/how-it-works-number-4.png' %}">
+                    <h4>Оплати поїздку</h4>
+                </div>
+                <h6 class="item-description">Поповніть  особистий баланс через додаток Rooh та розпочніть поїздку. Завершіть поїздку через додаток Rooh, перевірте суму до оплати та сплатіть з коштів на особистому рахунку. Після підтвердження оплати отримаєте квитанцію про успішне завершення поїздки.<img src="{% static 'img/m-carel-down.png' %}"></h6>
+            </div>
+            <div class="item-block">
+                <img src="{% static 'img/m-how-it-works-5.png' %}" class="m-item-title-image">
+                <div class="item-name">
+                    <img class="item-number" src="{% static 'img/how-it-works-number-5.png' %}">
+                    <h4>Відштовхнись два рази та натисни
+                        ручку газу зправої сторони.</h4>
+                </div>
+                <h6 class="item-description">Щоб розпочати рух на електросамокаті Rooh, відштовхніться ногою двічі, щоб набрати початкову швидкість, а потім натисніть на ручку газу, яка знаходиться з правої сторони керма, щоб активувати мотор і продовжити рух.<img src="{% static 'img/m-carel-down.png' %}"></h6>
+            </div>
+            <div class="item-block">
+                <img src="{% static 'img/m-how-it-works-6.png' %}" class="m-item-title-image">
+                <div class="item-name">
+                    <img class="item-number" src="{% static 'img/how-it-works-number-6.png' %}">
+                    <h4>Насолоджуйся поїздкою
+                        (дотримуйся правил ПДР)</h4>
+                </div>
+                <h6 class="item-description">Насолоджуйтеся поїздкою на електросамокаті Rooh, але не забувайте дотримуватися правил дорожнього руху для безпеки себе та оточуючих.<img src="{% static 'img/m-carel-down.png' %}"></h6>
+            </div>
+            <div class="item-block">
+                <img src="{% static 'img/m-how-it-works-7.png' %}" class="m-item-title-image">
+                <div class="item-name">
+                    <img class="item-number" src="{% static 'img/how-it-works-number-7.png' %}">
+                    <h4>Паркуйся правильно, залиш самокат в зручному місці,
+                        де він не буде перешкоджати людям та автомобілям</h4>
+                </div>
+                <h6 class="item-description">Паркуйте самокат відповідально, обираючи місце, де він не створюватиме перешкод для пішоходів, велосипедистів та автомобілів. Уникайте блокування тротуарів, виходів з будівель та інших ключових зон доступу.<img src="{% static 'img/m-carel-down.png' %}"></h6>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="tariffs-section" class="tariffs">
+    <div class="sub-section">
+        <h2 class="section-name">ТАРИФИ</h2>
+        <div class="tariffs-block">
+            <div class="tariffs-info">
+                <p class="info">
+                    Наші тарифи розроблені, щоб надати вам свободу обирати без переплат.<br><br class="m-show">
+                    Приєднуйтесь до Rooh і рухайтеся легко та вигідно!
+                </p>
+                <div class="tariffs-buttons">
+                    <div class="button">
+                        <h4 class="price">{{c.price1}}</h4>
+                        <h6 class="name">Розблокування</h6>
+                    </div>
+                    <div class="button">
+                        <h4 class="price">{{c.price2}}</h4>
+                        <h6 class="name">Хвилина поїздки</h6>
+                    </div>
+                </div>
+                <div class="tariffs-buttons">
+                    <div class="button">
+                        <h4 class="price">{{c.price3}}</h4>
+                        <h6 class="name">Пауза</h6>
+                    </div>
+                    <div class="button">
+                        <h4 class="price" style="font-size: 28px !important;">{{c.price4}}</h4>
+                        <h6 class="name">Бронювання</h6>
+                    </div>
+                </div>
+                <a href="/payment/#rules_tariffs" class="tariffs-link">Натисніть щоб дізнатись більше</a>
+            </div>
+            <img class="tariffs-image" src="{% static 'img/tariffs-2.png' %}">
+        </div>
+    </div>
+</section>
+<section id="faq-section" class="faq">
+    <div class="sub-section">
+        <h2 class="section-name">Залишились питання?</h2>
+        <div class="question-container">
+            <div class="question active">
+                <h5 class="question-name">Де дозволено їздити?</h5>
+                <h6 class="question-description">
+                    • Їзда на тротуарах дозволена, однак слід враховувати пішоходів. Ми рухаємося разом, то ж подумай про безпеку.<br>
+                    • Їдьте по велодоріжках, тротуарах і біля правого узбіччя.
+                </h6>
+                <img src="{% static 'img/faq-1.png' %}" class="question-toggle-button">
+            </div>
+            <div class="question">
+                <h5 class="question-name">Де дозволено паркуватися?</h5>
+                <h6 class="question-description">
+                    <strong>1. Спеціально відведені зони:</strong> Шукайте зони для паркування електросамокатів, які можуть бути позначені в додатку Rooh або на міських інформаційних табличках.<br>
+                    <strong>2. Поруч з велосипедними стоянками:</strong> Часто дозволяється паркувати електросамокати поруч з велосипедними парковками, якщо це не заважає іншим користувачам.<br>
+                    <strong>3. Публічні місця з достатнім простором:</strong> Вибирайте місця, де є достатньо простору для пішоходів і не створюється перешкод для людей з обмеженими можливостями.<br><br>
+                    <strong>Важливо уникати паркування:</strong><br><br>
+                     • На тротуарах, де вони блокують пішохідний рух.<br>
+                     • У місцях, де самокат може блокувати доступ до громадських будівель, аварійних виходів, під'їздів будинків.<br>
+                     • На приватних територіях без дозволу власника.<br>
+                     • В зонах, де паркування заборонено міськими правилами.<br>
+                </h6>
+                <img src="{% static 'img/faq-1.png' %}" class="question-toggle-button">
+            </div>
+            <div class="question">
+                <h5 class="question-name">Пауза?</h5>
+                <h6 class="question-description">
+                    Якщо ви хочете зробити паузу під час користування електросамокатом від компанії Rooh, скористуйтесь функцію "Пауза" . Це дозволяє тимчасово зупинити поїздку, не завершуючи її, та зберегти самокат за собою, поки ви займаєтесь своїми справами. Ось як це працює:<br><br>
+                    <strong>1. Зупиніть самокат в безпечному місці,</strong> де він не буде створювати перешкод для інших.<br>
+                    <strong>2. Відкрийте додаток Rooh і знайдіть опцію "Пауза"</strong>  на екрані вашої поїздки.<br>
+                    <strong>3. Активуйте паузу в додатку.</strong> Самокат заблокується, але поїздка не буде завершена.<br>
+                    <strong>4. Для продовження поїздки відкрийте додаток і виберіть опцію,</strong> щоб продовжити. Самокат розблокується, і ви зможете продовжити рух.<br><br>
+                    Пам'ятайте, що під час паузи нараховується плата за користування самокатом. Перевірте тарифи та умови в додатку, щоб уникнути несподіваних витрат.<br>
+                </h6>
+                <img src="{% static 'img/faq-1.png' %}" class="question-toggle-button">
+            </div>
+            <div class="question">
+                <h5 class="question-name">Самокат технічно зламаний?</h5>
+                <h6 class="question-description">
+                    Якщо ви стикаєтеся з технічною несправністю або зламом самоката від компанії Rooh, важливо діяти відповідально та безпечно. Ось що вам потрібно зробити:<br><br>
+                    <br>
+                    <strong>Безпечно зупиніться та паркуйте самокат у відповідному місці,</strong> щоб він не створював перешкод для інших.<br><br>
+                    <strong>Відкрийте додаток Rooh</strong> та знайдіть опцію  "Повідомити про проблему", для повідомлення про технічну несправність або злам.<br><br>
+                    <strong>Опишіть проблему через додаток,</strong> надавши всю необхідну інформацію про несправність. Якщо є можливість, додайте фотографії, щоб допомогти команді технічної підтримки краще зрозуміти проблему.<br><br>
+                    <strong>Завершіть поїздку у додатку,</strong> якщо це можливо, щоб не нараховувались додаткові витрати.<br><br>
+                    Ми  вживемо всі необхідні заходи для вирішення проблеми, включно з відправкою технічної команди для ремонту або заміни самоката.<br><br>
+                </h6>
+                <img src="{% static 'img/faq-1.png' %}" class="question-toggle-button">
+            </div>
+            <div class="question">
+                <h5 class="question-name">Катання вдвох на самокаті?</h5>
+                <h6 class="question-description">
+                    Катання вдвох на одному електросамокаті  заборонено правилами  компанії Rooh.<br><br>
+                    Ось чому:<br><br>
+                    <strong>Безпека:</strong> Катання вдвох значно збільшує ризик втрати контролю над самокатом, падіння та отримання травм обома пасажирами.<br><br>
+                    <strong>Технічні обмеження:</strong> Електросамокати розраховані на вагу однієї людини. Перевищення цієї ваги може призвести до перевантаження мотора та інших частин самоката, що скорочує термін його служби.<br><br>
+                    <strong>Юридична відповідальність:</strong> У разі ДТП або пошкодження самоката внаслідок неправильного використання, користувач, що порушив правила, може зіткнутися з фінансовими витратами на ремонт та можливі штрафи.<br><br>
+                    Перед використанням самоката завжди ознайомлюйтеся з правилами користування на нашому сайті або у додатку Rooh. Це допоможе уникнути небажаних ситуацій та забезпечити безпечне та приємне користування послугами.
+                </h6>
+                <img src="{% static 'img/faq-1.png' %}" class="question-toggle-button">
+            </div>
+            <div class="question">
+                <h5 class="question-name">Які є зони для користуванням самокату?</h5>
+                <h6 class="question-description">
+                    Перевірити дозволені зони можна у додатку Rooh<br><br><br>
+                    <strong>1. Дозволені зони:</strong><br><br>
+                    Велосипедні доріжки: Більшість міст дозволяє катання на електросамокатах по велосипедних доріжках.<br><br>
+                    Місцеві вулиці: Деякі міста дозволяють користуватися самокатами на вулицях з низькою швидкістю руху.<br><br>
+                    Парки та рекреаційні зони: У деяких парках і рекреаційних зонах може бути дозволено катання на самокатах, але слід уважно перевіряти місцеві правила.<br><br>
+                    <strong>2. Обмежені зони:</strong><br><br>
+                    Пішохідні зони: У багатьох містах заборонено або обмежено користування електросамокатами в зонах з високою концентрацією пішоходів.<br><br>
+                    Головні дороги та швидкісні траси: Користування самокатами зазвичай заборонено на головних дорогах та швидкісних трасах.<br><br>
+                    <strong>3. Зони з особливими правилами:</strong><br><br>
+                    Зони зі зниженою швидкістю: Деякі райони можуть мати обмеження швидкості для електросамокатів.<br><br>
+                    Нічний режим: У деяких містах можуть бути обмеження на користування самокатами у вечірні та нічні години.<br><br>
+                    <strong>4. Заборонені зони:</strong><br><br>
+                    Приватна територія: Катання на самокатах заборонено без дозволу власника на приватних територіях.<br><br>
+                    Спеціально відведені території: Деякі місця, як-от військові бази або інші об'єкти, можуть забороняти в'їзд на самокатах.<br><br>
+                    Перед початком користування самокатом важливо ознайомитися з місцевими правилами та рекомендаціями через додаток Rooh або на офіційних міських вебсайтах. Це допоможе уникнути штрафів та забезпечити безпечне користування електросамокатами.<br><br>
+                </h6>
+                <img src="{% static 'img/faq-1.png' %}" class="question-toggle-button">
+            </div>
+            <div class="question">
+                <h5 class="question-name">Як завершити поїздку?</h5>
+                <h6 class="question-description">
+                    Щоб завершити поїздку на електросамокаті компанії Rooh, вам потрібно виконати кілька простих кроків:<br><br><br>
+                    <strong>Знайдіть дозволене місце для паркування:</strong> Переконайтеся, що ви паркуєте самокат у відведеному або дозволеному місці згідно мапі у додатку Rooh, де він не буде створювати перешкод для пішоходів, велосипедистів або автомобільного руху.<br><br><br>
+                    <strong>Паркуйте самокат коректно:</strong> Встановіть самокат вертикально, використовуючи підніжку, щоб він самостійно стояв.<br><br><br>
+                    <strong>Використовуйте додаток для завершення поїздки:</strong> Відкрийте мобільний додаток Rooh і виберіть опцію для завершення поїздки.  Зробіть фотографію правильно припаркованого самоката, щоб підтвердити, що він залишений у прийнятному місці.<br><br><br>
+                    <strong>Перевірте підтвердження про завершення поїздки:</strong> Після завершення поїздки в додатку вам має прийти підтвердження, що поїздка успішно закрита та оплачена. Переконайтеся, що ви отримали це підтвердження, щоб уникнути додаткових зборів.<br><br><br>
+                    Слідуючи цим крокам, ви зможете безпечно та відповідально завершити поїздку на електросамокаті, дотримуючись правил користування сервісом.<br><br><br>
+                </h6>
+                <img src="{% static 'img/faq-1.png' %}" class="question-toggle-button">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block c-scripts %}
+<script src="{% static 'scripts/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'scripts/swiper.js' %}"></script>
+{% endblock %}

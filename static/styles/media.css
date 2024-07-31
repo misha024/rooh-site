@@ -1,0 +1,203 @@
+.m-show {display: none}
+@media screen and (max-width: 1300px) {
+    .m-not {display: none !important}
+    .m-show {display: unset}
+    section {
+        & .sub-section {margin: 40px 24px !important;}
+        & .section-name {
+            font-size: 32px;
+            line-height: 48px;
+            text-align: left !important;
+        }
+    }
+    header {
+        padding: 20px 15px;
+        & .social-container {grid-gap: 5px}
+        & .logo {width: 50px}
+        & .select-lang {top: 69px !important}
+        & img.m-menu-close-button {display: none}
+
+        & .m-menu {
+            display: none;
+            position: absolute;
+            z-index: 2;
+            top: 69px;
+            left: 0;
+            background: white;
+            height: calc(100vh - 69px);
+            width: 100%;
+            padding: 0 20px;
+            list-style: none;
+            & .m-sub-menu {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                grid-gap: 29px;
+                margin: 60px 0;
+            }
+            & .link a {
+                font-family: "M PLUS Rounded 1c", sans-serif;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 150%;
+                text-decoration: none;
+                color: black;
+                &:hover {text-decoration: underline}
+            }
+            & .social-block {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 24px;
+            }
+            & .social-block .link-block {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 24px;
+            }
+        }
+        &.m-active {
+            & img.m-menu-open-button {display: none}
+            & img.m-menu-close-button {display: block}
+            & .m-menu {display: block}
+        }
+    }
+
+    section.about-section#about-section {
+        background: url("../img/m-about-1.png") center center no-repeat;
+        background-size: cover;
+        & .sub-section {margin: 122.75px 24px !important;}
+        & .section-name {
+            font-size: 48px;
+            line-height: 72px;
+        }
+        & .main-section-info {background: none; box-shadow: none; padding: 0}
+        & .social-links {
+            display: flex;
+            grid-gap: 18px;
+        }
+    }
+
+    section.advantages {
+        background: url("../img/bgc-ellipse-small.png") -100px -100px no-repeat,
+                    url("../img/bgc-ellipse-small.png") 150px 100px no-repeat,
+                    url("../img/bgc-ellipse-small.png") -140px 370px no-repeat !important;
+        & .sub-section {padding: 0 24px !important;}
+        & .advantage-card:first-child {margin-left: 0 !important;}
+    }
+
+    section.tariffs {
+        & .sub-section {
+            margin: 0 !important;
+            margin-bottom: -16px !important;
+            padding: 40px 24px !important;
+        }
+        & .tariffs-image { width: 100%}
+        & .tariffs-block {
+            flex-direction: column-reverse;
+            grid-gap: 34px !important;
+        }
+        & .tariffs-link {
+            font-size: 14px !important;
+            margin-top: -6px;
+        }
+        & .tariffs-info p.info {
+            font-size: 18px !important;
+            line-height: 27px !important;
+        }
+        & .tariffs-buttons {
+            grid-gap: 16px !important;
+            & .button {
+                justify-content: space-between;
+                gap: 8px;
+            }
+            & .price {
+                font-size: 28px !important;
+                text-align: center;
+            }
+            & .name {
+                font-size: 20px !important;
+                text-align: center;
+                font-weight: 500 !important;
+                word-wrap: break-word;
+            }
+        }
+        & br.m-show {display: flex !important;}
+    }
+
+    footer {
+        & .sub-section {margin: 40px 20px !important;}
+        & .logo {width: 60px}
+        & div {flex-direction: column; align-items: flex-start !important; grid-gap: 16px !important;}
+        & .link-block {
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            grid-gap: 24px !important;
+            & img {margin-left: 0 !important}
+            & a:nth-child(2) {margin-right: calc(100% - 104px)}
+        }
+
+        & .copyright-block {
+            flex-direction: column-reverse;
+            grid-gap: 32px !important;
+            padding: 0;
+            padding-top: 32px;
+            & .terms-link {grid-gap: 24px !important;}
+        }
+    }
+}
+
+
+section.how-it-works.mobile {
+    background: url("../img/bgc-ellipse-small.png") -140px -250px no-repeat !important;
+    & .sub-section {
+        margin: 0 !important;
+        padding: 40px 24px !important;
+    }
+    & .items-container {
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        & .item-block {
+            background: #2600009C;
+            grid-gap: 8px !important;
+            padding-bottom: 16px;
+            margin-bottom: 24px !important;
+            border-radius: 96px 96px 24px 24px;
+        }
+        & .item-number {width: 32px}
+        & .item-name h4 {
+            font-size: 18px;
+            line-height: 27px;
+        }
+        & .item-name, & .item-description {padding: 0 12px}
+        & .item-description {
+            position: relative;
+            max-height: 28px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-right: 40px;
+            & img {
+                position: absolute;
+                top: -5px;
+                right: 15px;
+                cursor: pointer;
+            }
+        }
+        & .item-block.active .item-description {
+            max-height: fit-content;
+            white-space: pre-wrap;
+            & img {rotate: 180deg}
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    section.how-it-works {display: none !important}
+    section.how-it-works.mobile {display: flex !important}
+}

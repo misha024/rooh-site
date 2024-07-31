@@ -1,0 +1,101 @@
+body {background: #43181A}
+
+@media screen and (max-width: 1300px) {
+    section.privacy-\&-terms {
+        padding: 40px 20px !important;
+        & h2.section-name {
+            font-size: 24px !important;
+        }
+        & div.subsection {
+            font-size: 16px !important;
+            line-height: 24px !important;
+            text-indent: 15px !important;
+            & p.indent {text-indent: 5px !important;}
+            & b, & span.name {
+                font-size: 20px !important;
+                line-height: 30px !important;
+                &.m-show {display: flex !important;}
+            }
+        }
+        & div.subsection.active {
+            & b img {rotate: 180deg}
+        }
+    }
+}
+
+section.privacy-\&-terms {
+    flex-direction: column;
+    padding: 40px 160px;
+    color: white;
+    & div.section-note {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        & p {
+            font-family: "Montserrat Alternates", sans-serif;
+            line-height: 24px;
+            max-width: 400px;
+        }
+    }
+    & h2.section-name {
+        color: #FEFEFE;
+        margin-bottom: 40px;
+        font-size: 36px;
+        line-height: 36px;
+    }
+    & div.subsection {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        text-indent: 40px;
+        & p.indent {text-indent: 15px}
+        & span.name {
+            font-family: "M PLUS Rounded 1c", sans-serif;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 48px;
+            width: 100%;
+            text-align: center;
+            display: block;
+            margin-top: 40px;
+            margin-bottom: 24px;
+        }
+        & b {
+            font-family: "M PLUS Rounded 1c", sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 36px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 36px 0 16px 0;
+            &.m-show {display: none}
+        }
+        & span.section-table {
+            display: none;
+            flex-direction: row;
+            & span {
+                font-family: "M PLUS Rounded 1c", sans-serif;
+                line-height: 32px;
+                width: 50%;
+
+                border-left: 1px solid white;
+                border-bottom: 1px solid white;
+                border-top: 1px solid white;
+                &:first-child {padding-top: 10px}
+                &:last-child {border-right: 1px solid white; padding-bottom: 20px}
+
+                padding: 10px;
+            }
+        }
+        &.active span.section-table {display: flex}
+    }
+    & .ta-c {text-align: center !important;}
+    & .ta-r {text-align: right !important; width: 100%; display: block}
+    & .not-indent {text-indent: 0 !important;}
+}

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+header {
+    background: white;
+    padding: 24.5px 35px 24.5px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .menu {
+        display: flex;
+        grid-gap: 34.2px;
+        list-style: none;
+        & .link a {
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+            color: black;
+            text-decoration: none;
+            &:hover {text-decoration: underline}
+        }
+    }
+
+    & .social-container {
+        display: flex;
+        align-items: center;
+        grid-gap: 18px;
+        & .lang-block {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            grid-gap: 8px;
+            padding-right: 10px;
+            & .lang, & .selected-lang {
+                font-family: "Inter", sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19px;
+                &.selected-lang:hover {text-decoration: underline}
+            }
+            & .select-lang {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                border-top: 1px solid #dcdcdc;
+                border-right: 1px solid #dcdcdc;
+                border-left: 1px solid #dcdcdc;
+                top: 96px;
+                margin-left: -10px;
+                & .lang {
+                    padding: 10px 37px;
+                    background-color: white;
+                    border-bottom: 1px solid #dcdcdc;
+                    color: black;
+                    text-decoration: none;
+                    &:hover {background-color: #eeeeee}
+                }
+                &.active {display: flex}
+            }
+        }
+        & .m-menu-toggle-button {cursor: pointer}
+    }
+}
