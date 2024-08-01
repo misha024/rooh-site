@@ -16,6 +16,10 @@ body {background: #43181A}
                 line-height: 30px !important;
                 &.m-show {display: flex !important;}
             }
+            & span.section-table span {
+                font-size: 8px;
+                line-height: 14px !important;
+            }
         }
         & div.subsection.active {
             & b img {rotate: 180deg}
