@@ -48,8 +48,7 @@ def payment_policy(request):
 
 def get_scoot_api(request, scooter_code):
     user_agent = request.META.get('HTTP_USER_AGENT', '')
-    redirect_url = 'https://api.scootapi.com/application/rooh/link'
-    response = requests.get(redirect_url, headers={'User-Agent': user_agent})
+    response = requests.get('https://api.scootapi.com/application/rooh/link', headers={'User-Agent': user_agent})
     final_url = response.url
     if final_url.startswith('itms-appss://'):
         final_url = final_url.replace('itms-appss://', 'https://', 1)
