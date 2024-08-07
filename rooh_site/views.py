@@ -1,6 +1,7 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from .models import ContentEditor
-import requests, json
+import requests
 
 
 def index(request):
@@ -49,4 +50,4 @@ def get_scoot_api(request, scooter_code):
     user_agent = request.META.get('HTTP_USER_AGENT', '')
     redirect_url = 'https://api.scootapi.com/application/rooh/link'
     response = requests.get(redirect_url, headers={'User-Agent': user_agent})
-    # response.content = {'code': 404, 'message': 'HTTP 404 Not Found'}
+    return HttpResponseRedirect(response.url)
