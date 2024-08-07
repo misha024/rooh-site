@@ -50,5 +50,8 @@ def get_scoot_api(request, scooter_code):
     user_agent = request.META.get('HTTP_USER_AGENT', '')
     redirect_url = 'https://api.scootapi.com/application/rooh/link'
     response = requests.get(redirect_url, headers={'User-Agent': user_agent})
-    print(response.url)
-    return HttpResponseRedirect(response.url)
+    final_url = response.url
+    if final_url.startswith('itms-appss://'):
+        final_url = final_url.replace('itms-appss://', 'https://', 1)
+    print(final_url)
+    return HttpResponseRedirect(final_url)
